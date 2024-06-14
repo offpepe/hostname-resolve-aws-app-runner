@@ -1,0 +1,6 @@
+@hostname.resolver.aws_HostAddress = http://localhost:5230
+
+GET {{hostname.resolver.aws_HostAddress}}/ips
+Accept: application/json
+
+###
