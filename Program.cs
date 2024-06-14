@@ -23,6 +23,7 @@ Dictionary<string, string?> GetIps(HttpContext context) => new ()
     {"forwardedProto" , context.Request.Headers["X-Forwarded-Proto"].ToString()},
     {"localIp" , context.Connection.LocalIpAddress?.ToString()},
     {"remoteIp" , context.Connection.RemoteIpAddress?.ToString()},
-    {"servar_remoteip", context.GetServerVariable("REMOTE_ADDR")}
+    {"servar_remoteip", context.GetServerVariable("REMOTE_ADDR")},
+    {"public_ip", context.GetServerVariable("")}
 };
 
